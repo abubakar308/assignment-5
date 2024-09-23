@@ -1,1 +1,1 @@
-console.log("hurrray")
+const balance = document.getElementById('balance');

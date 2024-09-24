@@ -9,6 +9,7 @@ const donateFeni = document.getElementById('donate-feni');
 const feniFund = document.getElementById('feni-fund');
 const donateQuota = document.getElementById('donate-quota');
 const quotaFund = document.getElementById('quota-fund');
+const modal3 = document.getElementById("my_modal_3");
 
 function blog(){
   window.location.href = "./question.html"
@@ -29,7 +30,7 @@ historyButton.addEventListener('click',function(){
 })
 
 
-donateNoakhali.addEventListener('click',function(){
+donateNoakhali.addEventListener('click',function(event){
     let currentBalance = parseFloat(balance.innerText);
     let noakhaliFunds = Number(noakhaliFund.innerText);
     const addAmount = Number(document.getElementById("input-field-noakhali").value);
@@ -44,6 +45,7 @@ donateNoakhali.addEventListener('click',function(){
       <p>Date: ${Date()} </p>
       </div>`;
       historyContainer.appendChild(div);
+      modal3.showModal();
     }
    else{
     alert("Invalid Amount");
@@ -66,6 +68,7 @@ donateFeni.addEventListener('click',function(){
       <p>Date: ${Date()} </p>
       </div>`;
       historyContainer.appendChild(div);
+      modal3.showModal();
     }
    else{
     alert("Invalid Amount");
@@ -88,6 +91,7 @@ donateQuota.addEventListener('click',function(){
       <p>Date: ${Date()} </p>
       </div>`;
       historyContainer.appendChild(div);
+      modal3.showModal();
     }
    else{
     alert("Invalid Amount");

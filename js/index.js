@@ -10,14 +10,22 @@ const feniFund = document.getElementById('feni-fund');
 const donateQuota = document.getElementById('donate-quota');
 const quotaFund = document.getElementById('quota-fund');
 
+function blog(){
+  window.location.href = "./question.html"
+}
+
 
 donationButton.addEventListener('click',function(){
   historyContainer.classList.add('hidden');
   donationContainer.classList.remove('hidden');
+  historyButton.style.backgroundColor = "white"
+  donationButton.style.backgroundColor = "green"
 })
 historyButton.addEventListener('click',function(){
   donationContainer.classList.add('hidden');
   historyContainer.classList.remove('hidden');
+  donationButton.style.backgroundColor = 'white';
+  historyButton.style.backgroundColor = "green"
 })
 
 

@@ -9,10 +9,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="bg-[#F9F7F3] h-28 mb-20 sticky top-0">
+    <header class="bg-[#F9F7F3] h-32 mb-20 sticky top-0">
         <!-- navbar section -->
         <nav class="flex justify-between items-center mx-4 md:mx-24">
-            <button class="bg-green-500 px-4 rounded-xl py-2 font-semibold text-xl">Blog</button>
+            <button onclick="blog()" class="bg-green-500 px-4 rounded-xl py-2 font-semibold text-xl">Blog</button>
             <div class="flex items-center gap-2">
                 <img src="assets/logo.png" alt="Donation logo">
                 <p class="font-semibold text-xl">Donate Bangladesh</p>
@@ -26,8 +26,8 @@
     </header>
     <main class="">
         <section class="">
-            <div class="flex justify-center gap-4 my-10 sticky top-16">
-                <button id="donation-button" class="px-7 py-4 border-solid border-gray-400 border-2 rounded-xl">Donation</button>
+            <div class="flex justify-center font-semibold gap-4 my-10 sticky top-16">
+                <button id="donation-button" class="px-7 bg-green-400 py-4 border-solid border-gray-400 border-2 rounded-xl">Donation</button>
                 <button id="history-button" class="px-7 py-4 border-solid border-gray-400 border-2 rounded-xl">History</button>
             </div>
             <div id="donation-container">
@@ -142,7 +142,7 @@
             <div class="hidden" id="history-container"></div>
         </section>
     </main>
-    <footer class="h-10 bg-gray-400"></footer>
+    <footer class="h-16 mt-5 bg-[#F9F7F3] "></footer>
     <script src="js/index.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
     <header class="bg-[#F9F7F3] h-32 mb-20 sticky top-0">
         <!-- navbar section -->
         <nav class="flex justify-between items-center mx-4 md:mx-24">
-            <button onclick="blog()" class="bg-[rgb(180,244,97)] px-4 rounded-xl py-2 font-semibold text-xl">Blog</button>
+            <a href="blog.html"><button class="bg-[rgb(180,244,97)] px-4 rounded-xl py-2 font-semibold text-xl">Blog</button></a>
             <div class="flex items-center gap-2">
                 <img src="assets/logo.png" alt="Donation logo">
                 <p class="font-semibold text-xl">Donate Bangladesh</p>
@@ -45,7 +45,7 @@
                         <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                         <input id="input-field-noakhali" class="px-7 py-4 border-solid border-gray-400 border-2 rounded-xl" type="number" placeholder="write donation amount">
                         <div class="flex justify-center">
-                          <button  id="donate-noakhali" class=" bg-[rgb(180,244,97)] md:w-full px-4 rounded-xl py-2 font-semibold text-xl" onclick="showModal()">Donate now   
+                          <button  id="donate-noakhali" class=" bg-[rgb(180,244,97)] md:w-full px-4 rounded-xl py-2 font-semibold text-xl">Donate now   
                           </button>
                         </div>
                         <dialog id="my_modal_3" class="modal text-center">
@@ -81,8 +81,24 @@
                         <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                         <input id="input-field-feni" class="px-7 py-4 border-solid border-gray-400 border-2 rounded-xl" type="text" placeholder="write donation amount">
                         <div class="flex justify-center">
-                        <button  id="donate-feni" class="md:w-full bg-[rgb(180,244,97)] px-4 rounded-xl py-2 font-semibold text-xl" onclick="showModal()">Donate now   
+                        <button class="md:w-full bg-[rgb(180,244,97)] px-4 rounded-xl py-2 font-semibold text-xl" onclick="showModal1()">Donate now   
                         </button>
+                        <dialog id="my_modal_3" class="modal text-center">
+                          <div class="modal-box">
+                            <h3 class="text-lg font-bold text-center">Congrates!</h3>
+                              <div class="flex justify-center">
+                                  <img src="assets/coin.png" alt="">
+                              </div>
+                            <p class="py-4">You Have donate for Humanity</p>
+                              <head>Successfully</head>
+                            <div class="modal-action">
+                              <form method="dialog">
+                                <!-- Close button -->
+                                  <button class="btn mx-36">Close Confirmation</button>
+                              </form>
+                            </div>
+                          </div>
+                        </dialog>
                         </div>
                     </div>
                 </div>
@@ -101,7 +117,7 @@
                         <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                         <input id="input-field-quota" class="px-7 py-4 border-solid border-gray-400 border-2 rounded-xl" type="text" placeholder="write donation amount">
                         <div class="flex justify-center"> 
-                          <button  id="donate-quota" class="md:w-full bg-[rgb(180,244,97)] px-4 rounded-xl py-2 font-semibold text-xl" onclick="showModal()">Donate now   
+                          <button  class="md:w-full bg-[rgb(180,244,97)] px-4 rounded-xl py-2 font-semibold text-xl" onclick="showModal()">Donate now   
                           </button>
                         </div>
                         

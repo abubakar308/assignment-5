@@ -19,13 +19,13 @@ donationButton.addEventListener('click',function(){
   historyContainer.classList.add('hidden');
   donationContainer.classList.remove('hidden');
   historyButton.style.backgroundColor = "white"
-  donationButton.style.backgroundColor = "green"
+  donationButton.style.backgroundColor = "rgb(180,244,97)"
 })
 historyButton.addEventListener('click',function(){
   donationContainer.classList.add('hidden');
   historyContainer.classList.remove('hidden');
   donationButton.style.backgroundColor = 'white';
-  historyButton.style.backgroundColor = "green"
+  historyButton.style.backgroundColor = "rgb(180,244,97)"
 })
 
 

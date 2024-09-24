@@ -1,5 +1,5 @@
 const balance = document.getElementById('balance');
-const donationButton = document.getElementById('donation_button');
+const donationButton = document.getElementById('donation-button');
 const historyButton = document.getElementById('history-button');
 const donationContainer = document.getElementById('donation-container');
 const historyContainer = document.getElementById('history-container');
@@ -11,6 +11,16 @@ const donateQuota = document.getElementById('donate-quota');
 const quotaFund = document.getElementById('quota-fund');
 
 
+donationButton.addEventListener('click',function(){
+  historyContainer.classList.add('hidden');
+  donationContainer.classList.remove('hidden');
+})
+historyButton.addEventListener('click',function(){
+  donationContainer.classList.add('hidden');
+  historyContainer.classList.remove('hidden');
+})
+
+
 donateNoakhali.addEventListener('click',function(){
     let currentBalance = parseFloat(balance.innerText);
     let noakhaliFunds = Number(noakhaliFund.innerText);
@@ -20,6 +30,12 @@ donateNoakhali.addEventListener('click',function(){
         balance.innerText = currentBalance;
       noakhaliFunds +=addAmount;
       noakhaliFund.innerText = noakhaliFunds;
+     const div = document.createElement('div');
+     div.innerHTML = `
+ <div class="max-w-screen-xl mx-auto my-3 p-3 rounded-xl border-solid border-2 border-gray-200"> <h3 class="text-xl font-semibold">  ${addAmount} Taka is Donated for famine-2024 at Feni, Bangladesh</h3>
+      <p>Date: ${Date()} </p>
+      </div>`;
+      historyContainer.appendChild(div);
     }
    else{
     alert("Invalid Amount");
@@ -35,6 +51,13 @@ donateFeni.addEventListener('click',function(){
         balance.innerText = currentBalance;
       feniFunds +=addAmount;
       feniFund.innerText = feniFunds;
+
+      const div = document.createElement('div');
+     div.innerHTML = `
+ <div class="max-w-screen-xl mx-auto my-3 p-3 rounded-xl border-solid border-2 border-gray-200"> <h3 class="text-xl font-semibold">  ${addAmount} Taka is Donated for Flood Relief in Feni,Bangladesh</h3>
+      <p>Date: ${Date()} </p>
+      </div>`;
+      historyContainer.appendChild(div);
     }
    else{
     alert("Invalid Amount");
@@ -48,9 +71,15 @@ donateQuota.addEventListener('click',function(){
     if(currentBalance>=addAmount && addAmount>=1){
         currentBalance -= addAmount;
         balance.innerText = currentBalance;
-      quotaFund +=addAmount;
+      quotaFunds += addAmount;
       quotaFund.innerText = quotaFunds;
-      console.log(quotaFund)
+
+      const div = document.createElement('div');
+     div.innerHTML = `
+ <div class="max-w-screen-xl mx-auto my-3 p-3 rounded-xl border-solid border-2 border-gray-200"> <h3 class="text-xl font-semibold">  ${addAmount} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
+      <p>Date: ${Date()} </p>
+      </div>`;
+      historyContainer.appendChild(div);
     }
    else{
     alert("Invalid Amount");
